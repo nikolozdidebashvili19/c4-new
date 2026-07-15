@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1 , 
+        "fullName":"nika nikadze" ,
+        "isSmoker": false , 
+        "age": 16
+    } , 
+    
+    {
+      "id": 2,
+      "fullName": "giorgi nikadze",
+      "isSmoker": false,
+      "age": 16
+    }
+]
