@@ -1,11 +1,13 @@
 const { Router } = require("express");
 const blogsRouter = new Router()
 const fs = require("fs/promises");
+const checkBlogsPost = require("../middlewares/check-blogs-post");
 
-blogsRouter.get('/' , async(req,res)=> {
+blogsRouter.get('/' , checkBlogsPost, async(req,res)=> {
     const blogs = await fs.readFile('blogs.json' , 'utf-8')
     const parsedBlogs = JSON.parse(blogs)
-    res.json(parsedBlogs)
+    res.json(parsedBlogs) 
+   
 })
 
 blogsRouter.post("/", async (req, res) => {

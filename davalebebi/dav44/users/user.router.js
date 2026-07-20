@@ -3,6 +3,7 @@ const fs = require('fs/promises')
 const userRouter = new Router()
 
 app.get("/", async (req, res) => {
+  
     const users = await fs.readFile('users.json' , 'utf-8')
     const parsedUsers = JSON.parse(users) 
     res.json(parsedUsers)
